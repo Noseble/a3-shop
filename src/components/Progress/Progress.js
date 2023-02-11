@@ -7,7 +7,7 @@ function Progres({ phase, step, stepName }) {
     <span className={style.group} data-phase={phase}>
         <span className={style.icon}>
           <span className={style.text}>{step}</span>
-              <Complete className={style.svg} alt="complete" />
+              <Complete className={style.complete} alt="complete" />
           </span>
         <span className={style.label}>{stepName}</span>
         </span>
