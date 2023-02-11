@@ -1,0 +1,63 @@
+.register {
+  margin: 50px auto;
+  width: 100%;
+}
+
+.container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.bar:nth-child(2),
+.bar:nth-child(4) {
+  border-top: 4px solid black;
+  margin-right: 16px;
+  width: 300px;
+}
+
+.bar:nth-child(6) { 
+  display: none;
+}
+
+.group:nth-child(3),
+.group:nth-child(5),
+.bar:nth-child(4) {
+  opacity: .4;
+}
+
+
+.icon {
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: #2A2A2A;
+}
+
+.text {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  color: white;
+}
+
+.label {
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+svg {
+  display: none;
+}
