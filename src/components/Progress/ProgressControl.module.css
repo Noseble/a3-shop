@@ -4,8 +4,11 @@
   
 }
 
-.cursor {
+:global(.cursor) {
   cursor: pointer;
+}
+
+.progress_control svg {
   width: 40px;
 }
 

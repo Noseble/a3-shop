@@ -8,22 +8,22 @@ export default function ProgressControl() {
       <section className={style.btn_group} data-phase="address">
         <button className={style.next}>
           下一步
-          <RightArrow className={style.cursor} />
+          <RightArrow className="cursor"/>
         </button>
       </section>
       <section className={style.btn_group2} data-phase="shipping">
         <button className={style.prev}>
-          <LeftArrow className={style.cursor} />
+          <LeftArrow className="cursor"/>
           上一步
         </button>
         <button className={style.next}>
           下一步
-          <RightArrow className={style.cursor} />
+          <RightArrow className="cursor"/>
         </button>
       </section>
       <section className={style.btn_group} data-phase="credit-card">
         <button className={style.prev}>
-          <LeftArrow className={style.cursor} />
+          <LeftArrow className="cursor"/>
           上一步
         </button>
         <button className={style.next}>確認下單</button>
