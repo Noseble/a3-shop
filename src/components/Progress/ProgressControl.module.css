@@ -1,0 +1,22 @@
+.progress_control {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.btn_group:nth-child(3),
+.btn_group2 {
+  display: none;
+}
+
+button {
+  width: 80px;
+}
+
+.next {
+  position: absolute;
+}
