@@ -1,22 +1,56 @@
 .progress_control {
   display: flex;
   margin-top: 20px;
-  justify-content: space-between;
+  
 }
 
 .cursor {
   cursor: pointer;
+  width: 40px;
+}
+
+.btn_group,
+.btn_group2 {
+  padding-top: 24px;
+  border-top: 1px solid #E6E6EB;
+  display: flex;
+  justify-content: space-between;
 }
 
 .btn_group:nth-child(3),
 .btn_group2 {
   display: none;
-}
+} 
 
 button {
-  width: 80px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  border-radius: 8px;
+  border-width: 0px;
+  padding: 8px;
+  font-family: Inter, sans-serif;
+}
+
+.btn_group p {
+  padding-left: 36px;
 }
 
 .next {
-  position: absolute;
+  justify-content: center;
+  width: 174px;
+  font-weight: 500;
+  line-height: 17px;
+  background: #F67599;
+  color: #FFFFFF;
+  margin-left: auto;
+}
+
+.prev {
+  width: 174px;
+  font-weight: 500;
+  line-height: 17px;
+  background-color: white;
+  color: black;
 }

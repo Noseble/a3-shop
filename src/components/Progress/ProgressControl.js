@@ -26,7 +26,7 @@ export default function ProgressControl() {
           <LeftArrow className={style.cursor} />
           上一步
         </button>
-        <button className="next">確認下單</button>
+        <button className={style.next}>確認下單</button>
       </section>
     </section>
   );
