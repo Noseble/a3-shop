@@ -4,10 +4,6 @@
   grid-gap: 2rem;
 }
 
-.group {
-  margin-top: 24px;
-}
-
 .title,
 .location {
   grid-column: 1 / 2;
