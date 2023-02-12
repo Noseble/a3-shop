@@ -8,8 +8,8 @@ export default function StepTwo() {
       <input id="shipping-standard" type="radio" name="shipping"checked></input>
       <div className={style.radio_info}>
         <div className={style.info}>
-          <span className={style.text}>標準運送</span>
-          <span className={style.price}>免費</span>
+          <div className={style.text}>標準運送</div>
+          <div className={style.price}>免費</div>
         </div>
           <div className={style.period}>約 3~7個工作天</div>
       </div>
