@@ -10,8 +10,8 @@ function Main() {
     <main>
       <Progress />
       <StepOne />
-      <StepTwo />
-      <StepThree />
+      {/* <StepTwo /> */}
+      {/* <StepThree /> */}
       <ProgressControl />
     </main>
   );
