@@ -4,7 +4,7 @@ function Form( { phase, title, children } ) {
   return (
     <section className={style.container}>
       <form data-phase={phase}>
-        <h3 className="form-title">{title}</h3>
+        <h3 className={style.title}>{title}</h3>
           <section className={style.body}>
             {children}
           </section>
