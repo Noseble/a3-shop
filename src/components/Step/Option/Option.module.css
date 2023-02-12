@@ -13,3 +13,9 @@ select {
   cursor: pointer;
   -webkit-appearance: none;
 }
+
+.label {
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: #808080;
+}

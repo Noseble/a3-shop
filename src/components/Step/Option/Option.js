@@ -1,5 +1,4 @@
-import './Option.css'
-import style from '../StepOne.module.css'
+import style from './Option.module.css'
 
 function Option({ value, option }) {
   return (
