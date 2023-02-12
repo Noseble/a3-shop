@@ -1,23 +1,7 @@
 import Form from "./Form/Form";
+import Input from "./Input/Input"
 import {Option, OptionGroup} from "./Option/Option";
 import style from "./StepOne.module.css"
-
-function Input({ name, placeholder, maxLength }) {
-  return (
-    <>
-    <div className={style.label}>{name}</div>
-    <input type="text" placeholder={placeholder} maxLength={maxLength}></input>
-    </>
-  );
-}
-
-function InputContent ({ children }) {
-  return (
-    <div className={style.content}>
-      {children}
-    </div>
-  );
-}
 
 function CityOption () {
   const city = [
@@ -65,7 +49,7 @@ function CityOption () {
 function StepOne() {
   return (
     <Form phase="address" title="寄送地址" >
-        <InputContent>
+        <div className={style.content}>
             <div className={`${style.title} + ${style.group}`}>
                 <OptionGroup name="稱謂">
                     <Option value="mr" option="先生" />
@@ -80,8 +64,8 @@ function StepOne() {
                   maxLength={10} 
                 />
             </div>
-        </InputContent>
-        <InputContent>
+        </div>
+        <div className={style.content}>
             <div className={`${style.phone} ${style.group}`}>
                 <Input
                   name="電話"
@@ -96,8 +80,8 @@ function StepOne() {
                   maxLength={50} 
                 />
             </div>
-        </InputContent>
-        <InputContent>
+        </div>
+        <div className={style.content}>
             <div className={`${style.location} ${style.group}`}>
                 <OptionGroup name="縣市">
                       <CityOption />
@@ -110,7 +94,7 @@ function StepOne() {
                   maxLength={10} 
                 />
             </div>
-        </InputContent>
+        </div>
     </Form>    
   );
 }
