@@ -5,10 +5,15 @@
 .radio_group {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-top: 24px;
   padding: 11px 20px;
-  border: 1px solid #F0F0F5;
-  border-radius: 4px;
+  position: relative;
+}
+
+.radio_info {
+  display: flex;
+  flex-direction: column;
 }
 
 input[type='radio'] {
@@ -17,9 +22,6 @@ input[type='radio'] {
   margin-right: 20px;
 }
 
-.radio_group input[type='radio']:checked ~ .radio_group {
-  border: 1px solid #2A2A2A;
-}
 
 .info {
   display: flex;
@@ -34,11 +36,29 @@ input[type='radio'] {
 }
 
 .price {
-    width: 26px;
+    width: 28px;
   }
 
 .period,
 .price {
   font-size: 12px;
   line-height: 16px;
+}
+
+.radio_border_box { 
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+input[type='radio'] ~ .radio_border_box {
+  border: 1px solid #F0F0F5;
+  border-radius: 4px;
+}
+
+input[type='radio']:checked~.radio_border_box {
+  border: 1px solid #2A2A2A;
+  border-radius: 4px;
 }

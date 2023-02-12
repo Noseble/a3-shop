@@ -24,6 +24,7 @@ export default function StepTwo() {
         </div>
           <div className={style.period}>48 小時內送達</div>
       </div>
+      <div className={style.radio_border_box}></div>
       </label>
     </Form>
   );
