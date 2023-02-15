@@ -1,20 +1,14 @@
-import './Main.css';
-import Progress from './Progress/Progress';
-import ProgressControl from './Progress/ProgressControl';
-import StepOne from './Step/StepOne';
-import StepTwo from './Step/StepTwo';
-import StepThree from './Step/StepThree';
+import "./Main.module.css";
+import RegistrerContainer from "./RegisterContainer";
+import Cart from "./Cart/Cart";
 
 function Main() {
   return (
     <main>
-      <Progress />
-      <StepOne />
-      {/* <StepTwo /> */}
-      {/* <StepThree /> */}
-      <ProgressControl />
+      <RegistrerContainer />
+      <Cart />
     </main>
   );
 }
 
-export default Main
+export default Main;
