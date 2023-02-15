@@ -3,19 +3,19 @@ select {
   padding: 12px 16px;
   font-weight: 400;
   font-size: 12px;
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
   line-height: 16px;
-  border: 1px solid #4A4A4A;
+  border: 1px solid #4a4a4a;
   border-radius: 4px;
   background-color: #cb181800;
-  color: #2A2A2A;
+  color: #2a2a2a;
   background-color: transparent;
   cursor: pointer;
   -webkit-appearance: none;
 }
 
 .label {
-  margin-bottom: 12px;
+  margin: 12px 0;
   font-size: 12px;
   color: #808080;
 }

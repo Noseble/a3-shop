@@ -1,7 +1,6 @@
 .progress_control {
   display: flex;
   margin-top: 20px;
-  
 }
 
 :global(.cursor) {
@@ -15,7 +14,7 @@
 .btn_group,
 .btn_group2 {
   padding-top: 24px;
-  border-top: 1px solid #E6E6EB;
+  border-top: 1px solid #e6e6eb;
   display: flex;
   justify-content: space-between;
 }
@@ -23,7 +22,7 @@
 .btn_group:nth-child(3),
 .btn_group2 {
   display: none;
-} 
+}
 
 button {
   width: 100px;
@@ -45,8 +44,8 @@ button {
   width: 174px;
   font-weight: 500;
   line-height: 17px;
-  background: #F67599;
-  color: #FFFFFF;
+  background: #f67599;
+  color: #ffffff;
   margin-left: auto;
 }
 

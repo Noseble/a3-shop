@@ -1,6 +1,5 @@
 .register {
   margin: 50px auto;
-  width: 100%;
 }
 
 .container {
@@ -8,7 +7,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 
 .bar:nth-child(2),
@@ -18,16 +16,15 @@
   width: 300px;
 }
 
-.bar:nth-child(6) { 
+.bar:nth-child(6) {
   display: none;
 }
 
 .group:nth-child(3),
 .group:nth-child(5),
 .bar:nth-child(4) {
-  opacity: .4;
+  opacity: 0.4;
 }
-
 
 .icon {
   display: inline-block;
@@ -37,7 +34,7 @@
   height: 24px;
   margin-right: 8px;
   border-radius: 50%;
-  background-color: #2A2A2A;
+  background-color: #2a2a2a;
 }
 
 .text {
@@ -66,4 +63,3 @@
   font-size: 32px;
   font-weight: 700;
 }
-
