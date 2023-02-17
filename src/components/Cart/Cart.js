@@ -52,6 +52,14 @@ export default function Cart() {
       <section className={style.list}>
         <Products />
       </section>
+      <section className={style.cart_info}>
+        <div className={style.text}>運費</div>
+        <div className={style.price}>免費</div>
+      </section>
+      <section className={style.cart_info}>
+        <div className={style.text}>小計</div>
+        <div className={style.price}>$0</div>
+      </section>
     </section>
   );
 }
