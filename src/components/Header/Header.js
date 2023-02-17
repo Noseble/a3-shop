@@ -43,12 +43,12 @@ export default function Header() {
           <li className={style.item}>
             <Cart alt="cart" />
           </li>
-          {/* <li className={style.item}>
-            <Moon alt="moon" />
-          </li> */}
           <li className={style.item}>
-            <Sun alt="sun" />
+            <Moon alt="moon" />
           </li>
+          {/* <li className={style.item}>
+            <Sun alt="sun" />
+          </li> */}
         </ul>
       </div>
     </header>
