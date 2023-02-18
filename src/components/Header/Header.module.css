@@ -36,16 +36,12 @@ header {
 
 .item {
   width: fit-content;
+  color: #2a2a2a;
+  cursor: pointer;
 }
 
 .logo {
   justify-self: center;
   width: 170px;
   grid-column:  3 / 4;
-}
-
-.nav-icon {
-  width: 24px;
-  height: 24px;
-  color: #2a2a2a;
 }
