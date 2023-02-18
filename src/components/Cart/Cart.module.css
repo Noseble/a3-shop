@@ -13,17 +13,9 @@ img {
   line-height: 24px;
 }
 
-.list {
-  border-top: 1px solid #f0f0f5;
-  padding-top: 16px;
-  padding-bottom: 32px;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .container {
   padding: 0px 24px;
-  margin-top: 166px;
+  margin-top: 205px;
   border: 1px solid #f0f0f5;
   border-radius: 8px;
   width: 42%;
