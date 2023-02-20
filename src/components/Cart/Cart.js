@@ -1,8 +1,8 @@
 import style from "./Cart.module.css";
-import { ReactComponent as Minus } from "../icons/minus.svg";
-import { ReactComponent as Plus } from "../icons/plus.svg";
+import { ReactComponent as Minus } from "../assets/icons/minus.svg";
+import { ReactComponent as Plus } from "../assets/icons/plus.svg";
 
-const data = [
+const productItems = [
   {
     id: "1",
     name: "貓咪罐罐",
@@ -19,7 +19,7 @@ const data = [
   },
 ];
 
-function Products({ id, name, img, price, quantity }) {
+function Product({ id, name, img, price, quantity }) {
   return (
       <div
         className={style.product}
@@ -49,7 +49,7 @@ export default function Cart() {
     <section className={style.container}>
       <h3 className={style.title}>購物籃</h3>
       <section className={style.list}>
-        { data.map(data => <Products {...data} />
+        {productItems.map(item => <Product {...item} />
         )}
       </section>
       <section className={style.cart_info}>
