@@ -1,5 +1,5 @@
 import style from'./Progress.module.css';
-import { ReactComponent as Complete } from '../icons/pg-complete.svg';
+import { ReactComponent as Complete } from '../assets/icons/pg-complete.svg';
 
 function Progres({ phase, step, stepName }) {
   return (

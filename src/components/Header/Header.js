@@ -1,9 +1,9 @@
 import style from "./Header.module.css";
-import { ReactComponent as Logo } from "../icons/logo.svg";
-import { ReactComponent as Cart } from "../icons/cart.svg";
-import { ReactComponent as Search } from "../icons/search.svg";
-import { ReactComponent as Moon } from "../icons/moon.svg";
-import { ReactComponent as Sun } from "../icons/sun.svg";
+import { ReactComponent as Logo } from "../assets/icons/logo.svg";
+import { ReactComponent as Cart } from "../assets/icons/cart.svg";
+import { ReactComponent as Search } from "../assets/icons/search.svg";
+import { ReactComponent as Moon } from "../assets/icons/moon.svg";
+import { ReactComponent as Sun } from "../assets/icons/sun.svg";
 
 export default function Header() {
   return (
