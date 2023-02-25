@@ -19,8 +19,7 @@
   justify-content: space-between;
 }
 
-.btn_group:nth-child(3),
-.btn_group2 {
+.hidden {
   display: none;
 }
 
@@ -47,6 +46,7 @@ button {
   background: #f67599;
   color: #ffffff;
   margin-left: auto;
+  z-index: 1;
 }
 
 .prev {
