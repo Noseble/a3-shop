@@ -9,21 +9,10 @@
   align-items: center;
 }
 
-.bar:nth-child(2),
-.bar:nth-child(4) {
+.bar {
   border-top: 4px solid black;
   margin-right: 16px;
   width: 300px;
-}
-
-.bar:nth-child(6) {
-  display: none;
-}
-
-.group:nth-child(3),
-.group:nth-child(5),
-.bar:nth-child(4) {
-  opacity: 0.4;
 }
 
 .icon {
@@ -34,19 +23,17 @@
   height: 24px;
   margin-right: 8px;
   border-radius: 50%;
-  background-color: #2a2a2a;
 }
 
 .text {
-  width: inherit;
-  height: inherit;
   position: absolute;
-  top: 0;
+  top: 1;
   font-size: 12px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 22px;
   text-align: center;
-  color: white;
+  border-radius: 50%;
+  border: 1px solid black;
 }
 
 .label {
@@ -55,11 +42,20 @@
   font-size: 16px;
 }
 
-.complete {
+.hidden {
   display: none;
 }
 
 .title {
   font-size: 32px;
   font-weight: 700;
+}
+
+.show {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+.opacity {
+  opacity: .3;
 }

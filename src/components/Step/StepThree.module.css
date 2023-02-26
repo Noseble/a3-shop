@@ -19,4 +19,6 @@
   grid-column: 3 / 5;
 }
 
-
+.hidden {
+  display: none;
+}

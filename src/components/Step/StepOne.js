@@ -42,40 +42,42 @@ function CityOption() {
   });
 }
 
-function StepOne() {
+function StepOne({ step }) {
   return (
-    <Form phase="address" title="寄送地址">
-      <div className={style.content}>
-        <div className={`${style.title} + ${style.group}`}>
-          <OptionGroup name="稱謂">
-            <Option value="mr" option="先生" />
-            <Option value="ms" option="女士" />
-            <Option value="mx" option="不明" />
-          </OptionGroup>
+    <div className={`${step > 1 ? style.hidden : ''}`}>
+      <Form phase="address" title="寄送地址">
+        <div className={style.content}>
+          <div className={`${style.title} + ${style.group}`}>
+            <OptionGroup name="稱謂">
+              <Option value="mr" option="先生" />
+              <Option value="ms" option="女士" />
+              <Option value="mx" option="不明" />
+            </OptionGroup>
+          </div>
+          <div className={`${style.name} + ${style.group}`}>
+            <Input name="姓名" placeholder="請輸入姓名" maxLength={10} />
+          </div>
         </div>
-        <div className={`${style.name} + ${style.group}`}>
-          <Input name="姓名" placeholder="請輸入姓名" maxLength={10} />
+        <div className={style.content}>
+          <div className={`${style.phone} ${style.group}`}>
+            <Input name="電話" placeholder="請輸入行動電話" maxLength={10} />
+          </div>
+          <div className={`${style.mail} ${style.group}`}>
+            <Input name="Email" placeholder="請輸入電子郵件" maxLength={50} />
+          </div>
         </div>
-      </div>
-      <div className={style.content}>
-        <div className={`${style.phone} ${style.group}`}>
-          <Input name="電話" placeholder="請輸入行動電話" maxLength={10} />
+        <div className={style.content}>
+          <div className={`${style.location} ${style.group}`}>
+            <OptionGroup name="縣市">
+              <CityOption />
+            </OptionGroup>
+          </div>
+          <div className={`${style.address} ${style.group}`}>
+            <Input name="地址" placeholder="請輸入地址" maxLength={10} />
+          </div>
         </div>
-        <div className={`${style.mail} ${style.group}`}>
-          <Input name="Email" placeholder="請輸入電子郵件" maxLength={50} />
-        </div>
-      </div>
-      <div className={style.content}>
-        <div className={`${style.location} ${style.group}`}>
-          <OptionGroup name="縣市">
-            <CityOption />
-          </OptionGroup>
-        </div>
-        <div className={`${style.address} ${style.group}`}>
-          <Input name="地址" placeholder="請輸入地址" maxLength={10} />
-        </div>
-      </div>
-    </Form>
+      </Form>
+    </div>
   );
 }
 
