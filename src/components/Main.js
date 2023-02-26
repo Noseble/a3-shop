@@ -1,11 +1,11 @@
 import "./Main.module.css";
-import RegisterContainer from "./RegisterContainer";
+import App from "./App";
 import Cart from "./Cart/Cart";
 
 function Main() {
   return (
     <main>
-      <RegisterContainer />
+      <App />
       <Cart />
     </main>
   );

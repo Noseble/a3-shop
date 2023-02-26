@@ -1,4 +1,4 @@
-import style from "./RegisterContainer.module.css";
+import style from "./App.module.css";
 import Progress from "./Progress/Progress";
 import ProgressControl from "./Progress/ProgressControl";
 import StepOne from "./Step/StepOne";
@@ -9,7 +9,7 @@ import { useState } from "react";
 export default function RegisterContainer() {
   let [state, setState] = useState(1)
 
-  function control(e) {
+  function handleClick(e) {
     const step = e.target.dataset.step
     if (step === '1') { setState(state + 1) }
     if (step === '2') { setState(state - 1) }
@@ -17,11 +17,11 @@ export default function RegisterContainer() {
 
   return (
     <div className={style.Container}>
-      <Progress />
-      <StepOne />
-      {/* <StepTwo /> */}
-      {/* <StepThree /> */}
-      <ProgressControl step={state} ctrl={control} />
+      <Progress step={state} />
+      <StepOne step={state} />
+      <StepTwo step={state} />
+      <StepThree step={state} />
+      <ProgressControl step={state} onClick={handleClick} />
     </div>
   );
 }
