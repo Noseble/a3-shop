@@ -20,16 +20,18 @@ const productItems = [
   },
 ];
 
-function Product({ id, name, img, price }) {
+function Product({ id, name, img, price, setTotal }) {
   let [quantity, setQuantity] = useState(0)
 
   function handlePlus() {
     setQuantity(quantity + 1)
+    setTotal(total => total + price)
   }
 
   function handleMinus() {
     if (quantity === 0) return
     setQuantity(quantity - 1)
+    setTotal(total => total - price)
   }
 
 
@@ -58,11 +60,16 @@ function Product({ id, name, img, price }) {
 }
 
 export default function Cart() {
+  const [total, setTotal] = useState(0);
+
   return (
     <section className={style.container}>
       <h3 className={style.title}>購物籃</h3>
       <section className={style.list}>
-        {productItems.map(item => <Product {...item} />
+        {productItems.map(item =>
+          <Product {...item}
+            setTotal={setTotal}
+          />
         )}
         <section className={style.cart_info}>
           <div className={style.text}>運費</div>
@@ -70,7 +77,7 @@ export default function Cart() {
         </section>
         <section className={style.cart_info}>
           <div className={style.text}>小計</div>
-          <div className={style.price}>$0</div>
+          <div className={style.price}>${total}</div>
         </section>
       </section>
     </section>
