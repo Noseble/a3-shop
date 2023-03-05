@@ -2,15 +2,16 @@ import { ReactComponent as LeftArrow } from "../assets/icons/left-arrow.svg";
 import { ReactComponent as RightArrow } from "../assets/icons/right-arrow.svg";
 import style from "./ProgressControl.module.css";
 import { useContext } from "react";
-import  { CreditInfoContext }  from"../../context/CreditInfoContext"
+import { CreditInfoContext }  from"../../context/CreditInfoContext"
 
 
 export default function ProgressControl({ onClick, step }) {
 
-  const creditInfoContext = useContext(CreditInfoContext)
-  function handleShowCreditInfo (e){
-    e.preventDefault()
-    console.log(creditInfoContext)
+  const creditData = useContext(CreditInfoContext);
+
+  function handleShowCreditInfo(e) {
+    e.preventDefault();
+    console.log(creditData);
   }
   return (
     <section className={style.progress_control}>
