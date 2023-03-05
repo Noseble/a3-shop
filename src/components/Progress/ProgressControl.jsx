@@ -1,9 +1,17 @@
 import { ReactComponent as LeftArrow } from "../assets/icons/left-arrow.svg";
 import { ReactComponent as RightArrow } from "../assets/icons/right-arrow.svg";
 import style from "./ProgressControl.module.css";
+import { useContext } from "react";
+import  { CreditInfoContext }  from"../../context/CreditInfoContext"
+
 
 export default function ProgressControl({ onClick, step }) {
 
+  const creditInfoContext = useContext(CreditInfoContext)
+  function handleShowCreditInfo (e){
+    e.preventDefault()
+    console.log(creditInfoContext)
+  }
   return (
     <section className={style.progress_control}>
       <section className={`${style.btn_group} ${step === 1 ? '' : style.hidden}`} data-phase="address">
@@ -27,7 +35,7 @@ export default function ProgressControl({ onClick, step }) {
           <LeftArrow />
           上一步
         </button>
-        <button className={`${style.next} cursor`} onClick={onClick} data-step='3'>確認下單</button>
+        <button className={`${style.next} cursor`} onClick={handleShowCreditInfo} data-step='3'>確認下單</button>
       </section>
     </section>
   );

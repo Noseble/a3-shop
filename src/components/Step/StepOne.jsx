@@ -55,15 +55,15 @@ function StepOne({ step }) {
             </OptionGroup>
           </div>
           <div className={`${style.name} + ${style.group}`}>
-            <Input name="姓名" placeholder="請輸入姓名" maxLength={10} />
+            <Input title="姓名" placeholder="請輸入姓名" maxLength={10} />
           </div>
         </div>
         <div className={style.content}>
           <div className={`${style.phone} ${style.group}`}>
-            <Input name="電話" placeholder="請輸入行動電話" maxLength={10} />
+            <Input title="電話" placeholder="請輸入行動電話" maxLength={10} />
           </div>
           <div className={`${style.mail} ${style.group}`}>
-            <Input name="Email" placeholder="請輸入電子郵件" maxLength={50} />
+            <Input title="Email" placeholder="請輸入電子郵件" maxLength={50} />
           </div>
         </div>
         <div className={style.content}>
@@ -73,7 +73,7 @@ function StepOne({ step }) {
             </OptionGroup>
           </div>
           <div className={`${style.address} ${style.group}`}>
-            <Input name="地址" placeholder="請輸入地址" maxLength={10} />
+            <Input title="地址" placeholder="請輸入地址" maxLength={10} />
           </div>
         </div>
       </Form>

@@ -1,10 +1,10 @@
 import style from "./Input.module.css"
 
-export default function Input({ name, placeholder, maxLength }) {
+export default function Input({ title, placeholder, maxLength, onChange, name }) {
   return (
     <>
-    <div className={style.label}>{name}</div>
-    <input type="text" placeholder={placeholder} maxLength={maxLength}></input>
+    <div className={style.label}>{title}</div>
+    <input type="text" placeholder={placeholder} maxLength={maxLength} onChange={onChange} name={name}></input>
     </>
   );
 }
