@@ -2,10 +2,14 @@ import style from "./Cart.module.css";
 import { ReactComponent as Minus } from "../assets/icons/minus.svg";
 import { ReactComponent as Plus } from "../assets/icons/plus.svg";
 import { useState, useContext } from "react";
-import CartItemContext from "../../context/CartContext";
+import { CartItemContext, totalPrice } from "../../context/CartContext";
 
-function Product({ id, name, img, price, setTotal }) {
-  let [quantity, setQuantity] = useState(0)
+function Product({ name, img, price, setTotal }) {
+  const Price = useContext(totalPrice)
+  let [quantity, setQuantity] = useState(Price)
+  
+
+
 
   function handlePlus() {
     setQuantity(quantity + 1)
@@ -43,25 +47,28 @@ function Product({ id, name, img, price, setTotal }) {
 }
 
 export default function Cart() {
+  const CartItem = useContext(CartItemContext)
   const [total, setTotal] = useState(0);
-  const productItems = useContext(CartItemContext)
+
   return (
     <section className={style.container}>
       <h3 className={style.title}>購物籃</h3>
       <section className={style.list}>
-        {productItems.map(item =>
+        <CartItemContext.Provider value={CartItem}>
+        {CartItem.map(item =>
           <Product {...item}
             setTotal={setTotal}
             key={item.id}
           />
         )}
+        </CartItemContext.Provider>
         <section className={style.cart_info}>
           <div className={style.text}>運費</div>
           <div className={style.price}>免費</div>
         </section>
         <section className={style.cart_info}>
           <div className={style.text}>小計</div>
-          <div className={style.price}>${total}</div>
+          <div className={style.price}>$ {total}</div>
         </section>
       </section>
     </section>

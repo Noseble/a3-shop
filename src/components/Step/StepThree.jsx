@@ -1,21 +1,10 @@
 import style from "./StepThree.module.css";
 import Form from "./Form/Form";
 import Input from "./Input/Input"
-import { useContext } from "react";
-import { CreditInfoContext } from "../../context/CreditInfoContext"
 
 
-export default function StepThree({ step }) {
+export default function StepThree({ step, onChange }) {
   
-  const {creditInfo, setCreditInfo} = useContext(CreditInfoContext);
-
-  function handleInputChange(e) {
-    setCreditInfo({
-      ...creditInfo,
-      [e.target.name]: e.target.value
-    });
-  }
-
   return (
     <div className={`${step === 3 ? '' : style.hidden}`}>
       <Form phase="credit-card" title="付款資訊" >
@@ -26,7 +15,7 @@ export default function StepThree({ step }) {
               placeholder='請輸入姓名'
               maxLength={10}
               name="creditName"
-              onChange={handleInputChange}
+              onChange={onChange}
             />
           </div>
           <div className={style.number}>
@@ -35,7 +24,7 @@ export default function StepThree({ step }) {
               placeholder='1111 2222 3333 4444'
               maxLength={16}
               name="creditNumber"
-              onChange={handleInputChange}
+              onChange={onChange}
             />
           </div>
           <div className={style.exp}>
@@ -44,7 +33,7 @@ export default function StepThree({ step }) {
               placeholder='有效期限'
               maxLength={5}
               name="creditExp"
-              onChange={handleInputChange}
+              onChange={onChange}
             />
           </div>
           <div className={style.cvc}>
@@ -53,7 +42,7 @@ export default function StepThree({ step }) {
               placeholder='cvc/ccv'
               maxLength={3}
               name="creditCvc"
-              onChange={handleInputChange}
+              onChange={onChange}
             />
           </div>
         </div>

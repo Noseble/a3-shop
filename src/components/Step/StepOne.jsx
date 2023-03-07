@@ -73,7 +73,7 @@ function StepOne({ step }) {
             </OptionGroup>
           </div>
           <div className={`${style.address} ${style.group}`}>
-            <Input title="地址" placeholder="請輸入地址" maxLength={10} />
+            <Input title="地址" placeholder="請輸入地址" maxLength={25} />
           </div>
         </div>
       </Form>

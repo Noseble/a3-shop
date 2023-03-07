@@ -4,10 +4,20 @@ import ProgressControl from "./Progress/ProgressControl";
 import StepOne from "./Step/StepOne";
 import StepTwo from "./Step/StepTwo";
 import StepThree from "./Step/StepThree";
-import { useState } from "react";
+import { CreditInfoContext } from "../context/CreditInfoContext"
+import { useContext, useState } from "react";
 
 export default function RegisterContainer() {
-  let [state, setState] = useState(1)
+  const [state, setState] = useState(1)
+  const creditInfo = useContext(CreditInfoContext)
+  const [cardInfo, setCardInfo] = useState(creditInfo)
+
+  function onChange (e) {
+    setCardInfo({
+      ...cardInfo,
+      [e.target.name]: e.target.value
+    })
+  }
 
   function handleClick(e) {
     const step = e.target.dataset.step
@@ -16,12 +26,14 @@ export default function RegisterContainer() {
   }
 
   return (
-    <div className={style.Container}>
-      <Progress step={state} />
-      <StepOne step={state} />
-      <StepTwo step={state} />
-      <StepThree step={state} />
-      <ProgressControl step={state} onClick={handleClick} />
-    </div>
+    <CreditInfoContext.Provider value={cardInfo}>
+        <div className={style.Container}>
+          <Progress step={state} />
+          <StepOne step={state} />
+          <StepTwo step={state} />
+          <StepThree step={state} onChange={onChange} />
+          <ProgressControl step={state} onClick={handleClick} />
+        </div>
+    </CreditInfoContext.Provider>
   );
 }

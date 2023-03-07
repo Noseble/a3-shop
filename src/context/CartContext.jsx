@@ -17,5 +17,5 @@ const productItems = [
   },
 ];
 
-const CartItemContext = createContext(productItems);
-export default CartItemContext
+export const totalPrice = createContext(0);
+export const CartItemContext = createContext(productItems);
