@@ -6,7 +6,7 @@ export default function StepTwo({ step }) {
     <div className={`${step === 2 ? '' : style.hidden }`}>
       <Form phase="shipping" title="結帳" >
         <label className={`${style.radio_group} cursor`} data-price="0">
-          <input id="shipping-standard" type="radio" name="shipping" checked></input>
+          <input id="shipping-standard" type="radio" name="shipping"></input>
           <div className={style.radio_info}>
             <div className={style.info}>
               <div className={style.text}>標準運送</div>
