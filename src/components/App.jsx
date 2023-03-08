@@ -4,12 +4,17 @@ import ProgressControl from "./Progress/ProgressControl";
 import StepOne from "./Step/StepOne";
 import StepTwo from "./Step/StepTwo";
 import StepThree from "./Step/StepThree";
-import { CreditInfoContext } from "../context/CreditInfoContext"
+import Cart from "./Cart/Cart"
 import { useContext, useState } from "react";
+import { CreditInfoContext } from "../context/CreditInfoContext"
+import { totalPrice } from "../context/CartContext"
+
 
 export default function RegisterContainer() {
   const [state, setState] = useState(1)
   const creditInfo = useContext(CreditInfoContext)
+  const Price = useContext(totalPrice)
+  const [total, setTotal] = useState(Price)
   const [cardInfo, setCardInfo] = useState(creditInfo)
 
   function onChange (e) {
@@ -26,14 +31,20 @@ export default function RegisterContainer() {
   }
 
   return (
-    <CreditInfoContext.Provider value={cardInfo}>
-        <div className={style.Container}>
-          <Progress step={state} />
-          <StepOne step={state} />
-          <StepTwo step={state} />
-          <StepThree step={state} onChange={onChange} />
-          <ProgressControl step={state} onClick={handleClick} />
-        </div>
-    </CreditInfoContext.Provider>
+
+    <totalPrice.Provider value={total}>
+        <CreditInfoContext.Provider value={cardInfo}>
+            <div className={style.Container}>
+              <Progress step={state} />
+              <StepOne step={state} />
+              <StepTwo step={state} />
+              <StepThree step={state} onChange={onChange} />
+              <ProgressControl step={state} onClick={handleClick} />
+            </div>
+        </CreditInfoContext.Provider>
+              <Cart setTotal={setTotal} />
+    </totalPrice.Provider>
+  
+    
   );
 }

@@ -8,11 +8,12 @@ import { totalPrice } from "../../context/CartContext";
 export default function ProgressControl({ onClick, step }) {
 
   const creditData = useContext(CreditInfoContext);
-  const Price = useContext(totalPrice)
+  const Price = useContext(totalPrice);
+
   function handleShowCreditInfo(e) {
     e.preventDefault();
     console.log(JSON.stringify(creditData, null, 2))
-    console.log(Price)
+    console.log(`You total price is $ ${Price}`)
   }
   return (
     <section className={style.progress_control}>
