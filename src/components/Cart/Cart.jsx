@@ -4,8 +4,9 @@ import { ReactComponent as Plus } from "../assets/icons/plus.svg";
 import { useState, useContext } from "react";
 import { CartItemContext, totalPrice } from "../../context/CartContext";
 
-function Product({ name, img, price, setTotal }) {
+function Product({ name, img, price, setTotal}) {
   let [quantity, setQuantity] = useState(0)
+
 
   function handlePlus() {
     setQuantity(quantity + 1)
@@ -36,7 +37,7 @@ function Product({ name, img, price, setTotal }) {
             <Plus className={style.plus} alt="plus" name="plus" onClick={handlePlus} />
           </div>
         </div>
-        <div className={style.price}>${`${price * quantity}`}</div>
+        <div className={style.price}>${new Intl.NumberFormat('en').format(price * quantity)}</div>
       </div>
     </div>
   );
@@ -45,7 +46,7 @@ function Product({ name, img, price, setTotal }) {
 
 export default function Cart({ setTotal }) {
   const CartItem = useContext(CartItemContext)
-  const finalPrice = useContext(totalPrice)
+  const finalPrice = new Intl.NumberFormat('en').format(useContext(totalPrice))
 
   return (
     <section className={style.container}>
